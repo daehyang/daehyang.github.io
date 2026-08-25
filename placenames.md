@@ -19,8 +19,9 @@ description: 대전향토문화연구회가 문헌과 현지 조사로 확인하
 
 ## 목록
 
-{% assign items = site.placenames | sort: "hid" %}
-{% if items.size == 0 %}
+{% assign listed = site.placenames | where: "status", "확정" | sort: "hid" %}
+{% assign retired = site.placenames | where: "status", "폐기" | sort: "hid" %}
+{% if listed.size == 0 %}
 
 아직 확정된 항목이 없습니다. 첫 심의가 끝나면 이곳에 실립니다.
 
@@ -28,22 +29,46 @@ description: 대전향토문화연구회가 문헌과 현지 조사로 확인하
 
 <table>
   <thead>
-    <tr><th>번호</th><th>이름</th><th>유형</th><th>소재지</th><th>상태</th></tr>
+    <tr><th>번호</th><th>이름</th><th>유형</th><th>소재지</th></tr>
   </thead>
   <tbody>
-  {% for item in items %}
+  {% for item in listed %}
     <tr>
       <td><a href="{{ item.url | relative_url }}"><code>{{ item.hid }}</code></a></td>
       <td>{{ item.label }}{% if item.hanja %} ({{ item.hanja }}){% endif %}</td>
       <td>{{ item.kind }}</td>
       <td>{{ item.locality }}</td>
-      <td>{{ item.status }}</td>
     </tr>
   {% endfor %}
   </tbody>
 </table>
 
-<p><a href="{{ '/assets/data/placenames.csv' | relative_url }}">목록 전체를 CSV 파일로 내려받기</a></p>
+{% endif %}
+
+<p><a href="{{ '/assets/data/placenames.csv' | relative_url }}">목록 전체를 CSV 파일로 내려받기</a>
+(내린 항목도 상태와 함께 들어 있습니다)</p>
+
+{% if retired.size > 0 %}
+
+### 목록에서 내린 항목
+
+향토문화 ID는 내린 뒤에도 다시 쓰지 않습니다. 번호가 비어 있는 자리를 밝히기 위해
+아래에 함께 싣습니다. 각 항목의 주소는 그대로 열립니다.
+
+<table>
+  <thead>
+    <tr><th>번호</th><th>이름</th><th>내린 사유</th></tr>
+  </thead>
+  <tbody>
+  {% for item in retired %}
+    <tr>
+      <td><a href="{{ item.url | relative_url }}"><code>{{ item.hid }}</code></a></td>
+      <td>{{ item.label }}{% if item.hanja %} ({{ item.hanja }}){% endif %}</td>
+      <td>{{ item.retired_reason }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
 
 {% endif %}
 
