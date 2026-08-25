@@ -32,3 +32,11 @@ defaults:
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+
+# 사이트에 내보내지 않는 파일 (저장소 문서·로컬 미리보기용)
+exclude:
+  - CLAUDE.md
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
