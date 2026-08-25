@@ -17,12 +17,26 @@ org:
 markdown: kramdown
 permalink: /notice/:year/:month/:day/:title/
 
+# 공개 등재부 — 향토문화 ID 한 건이 문서 한 장. /id/<ID>/ 로 열린다.
+# 문서는 internal 저장소의 tools/export_public.py 가 만든다. 직접 고치지 않는다.
+# 주소는 각 문서의 permalink으로 정한다 (아래 :name 은 대비용 기본값이며,
+# 슬러그화 때 대문자가 소문자로 바뀌므로 실제로는 쓰지 않는다).
+collections:
+  placenames:
+    output: true
+    permalink: /id/:name/
+
 defaults:
   - scope:
       path: ""
       type: posts
     values:
       layout: post
+  - scope:
+      path: ""
+      type: placenames
+    values:
+      layout: placename
   - scope:
       path: ""
     values:

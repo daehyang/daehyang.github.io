@@ -133,6 +133,50 @@ th { background: #F3F1EA; font-weight: 500; }
 .site-footer a { color: inherit; }
 .license { margin-top: 0.8rem; }
 
+/* ---- 향토문화 ID 등재부 ---- */
+.pn-kicker {
+  margin: 0;
+  font-size: 0.82rem;
+  letter-spacing: 0.18em;
+  color: var(--ink-2);
+}
+.placename .page-title { margin: 0.3rem 0 0.4rem; }
+.pn-id { margin: 0 0 1.8rem; }
+.pn-id code { font-size: 1rem; letter-spacing: 0.06em; }
+
+.pn-fields { margin: 1.6rem 0; display: grid; grid-template-columns: 7.5rem 1fr; gap: 0; }
+.pn-fields dt {
+  padding: 0.55rem 0.7rem 0.55rem 0;
+  border-top: 1px solid var(--line);
+  color: var(--ink-2);
+  font-size: 0.92rem;
+}
+.pn-fields dd {
+  margin: 0;
+  padding: 0.55rem 0;
+  border-top: 1px solid var(--line);
+}
+@media (max-width: 30rem) {
+  .pn-fields { grid-template-columns: 1fr; }
+  .pn-fields dt { padding-bottom: 0; border-top: 1px solid var(--line); }
+  .pn-fields dd { padding-top: 0.1rem; border-top: 0; }
+}
+
+.pn-retired { font-family: var(--sans); color: var(--ink); }
+.pn-cite { font-size: 0.92rem; color: var(--ink-2); }
+.pn-back { margin-top: 2.4rem; font-size: 0.95rem; }
+
+/* 발간본은 인쇄해 PDF로 만든다 — 화면 장식은 빼고 표만 남긴다 */
+@media print {
+  .spine, .site-nav, .pn-back { display: none; }
+  html { font-size: 11pt; }
+  .site-header, .content, .site-footer { max-width: none; }
+  a { color: var(--ink); text-decoration: none; }
+  table { font-size: 9.5pt; }
+  thead { display: table-header-group; }
+  tr { break-inside: avoid; }
+}
+
 /* ---- 접근성 ---- */
 :focus-visible { outline: 2px solid var(--seal); outline-offset: 2px; }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }

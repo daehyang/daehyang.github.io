@@ -1,0 +1,37 @@
+---
+layout: default
+---
+<article class="catalogue">
+
+  <h1 class="page-title">{{ page.title }}</h1>
+
+  <dl class="pn-fields">
+    <dt>판차</dt>
+    <dd>{{ page.edition }}</dd>
+    <dt>발간일</dt>
+    <dd>{{ page.issued }}</dd>
+    <dt>수록 항목</dt>
+    <dd>{{ page.count }}건</dd>
+    <dt>DOI</dt>
+    <dd>
+      {% if page.doi contains "10." %}
+      <a href="https://doi.org/{{ page.doi }}">{{ page.doi }}</a>
+      {% else %}
+      {{ page.doi }}
+      {% endif %}
+    </dd>
+    <dt>발간</dt>
+    <dd>대전향토문화연구회</dd>
+  </dl>
+
+  {{ content }}
+
+  <h2>이용 조건</h2>
+  <p>
+    이 목록은 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.ko">CC BY-SA 4.0</a>으로
+    공개합니다. 개별 항목을 인용할 때는 향토문화 ID와 그 항목의 주소를 함께 밝혀 주십시오.
+  </p>
+
+  <p class="pn-back"><a href="{{ '/placenames/' | relative_url }}">공개 등재부로 돌아가기</a></p>
+
+</article>

@@ -1,0 +1,69 @@
+---
+layout: default
+---
+<article class="placename">
+
+  <p class="pn-kicker">향토문화 ID</p>
+  <h1 class="page-title">{{ page.title }}</h1>
+  <p class="pn-id"><code>{{ page.hid }}</code></p>
+
+  {% if page.status == "폐기" %}
+  <blockquote class="pn-retired">
+    <strong>이 항목은 폐기되었습니다.</strong>
+    향토문화 ID는 영구 식별자이므로 폐기한 뒤에도 이 주소를 그대로 유지하며,
+    번호를 다시 쓰지 않습니다. 폐기 사유는 「대전향토문화목록」 해당 판을 보십시오.
+  </blockquote>
+  {% endif %}
+
+  <dl class="pn-fields">
+    <dt>유형</dt>
+    <dd>{{ page.kind }}</dd>
+
+    {% if page.locality %}
+    <dt>소재지</dt>
+    <dd>{{ page.locality }}</dd>
+    {% endif %}
+
+    {% if page.lat and page.lon %}
+    <dt>좌표</dt>
+    <dd>
+      {{ page.lat }}, {{ page.lon }}
+      <a href="https://www.openstreetmap.org/?mlat={{ page.lat }}&amp;mlon={{ page.lon }}#map=15/{{ page.lat }}/{{ page.lon }}">지도에서 보기</a>
+    </dd>
+    {% endif %}
+
+    {% if page.source %}
+    <dt>근거문헌</dt>
+    <dd>{{ page.source }}</dd>
+    {% endif %}
+
+    {% if page.wikidata %}
+    <dt>위키데이터</dt>
+    <dd><a href="https://www.wikidata.org/wiki/{{ page.wikidata }}"><span class="qid">{{ page.wikidata }}</span></a></dd>
+    {% endif %}
+
+    {% if page.wikipedia %}
+    <dt>위키백과</dt>
+    <dd><a href="{{ page.wikipedia }}">한국어 위키백과 문서</a></dd>
+    {% endif %}
+
+    <dt>상태</dt>
+    <dd>{{ page.status }}</dd>
+
+    {% if page.registered %}
+    <dt>등재일</dt>
+    <dd>{{ page.registered }}</dd>
+    {% endif %}
+  </dl>
+
+  <h2>인용</h2>
+  <p class="pn-cite">
+    대전향토문화연구회, 「대전향토문화목록」, 향토문화 ID {{ page.hid }},
+    {{ page.url | absolute_url }}
+  </p>
+
+  {{ content }}
+
+  <p class="pn-back"><a href="{{ '/placenames/' | relative_url }}">공개 등재부 전체 보기</a></p>
+
+</article>

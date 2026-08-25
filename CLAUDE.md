@@ -28,6 +28,26 @@ _posts/           소식 글: YYYY-MM-DD-제목.md
   값을 바꿀 때는 `_config.yml`과 함께 바꾼다.
 - 외부 리소스는 Google Fonts만 쓴다. CDN 스크립트를 새로 들이지 않는다.
 
+## 생성물 — 직접 고치지 말 것
+
+다음은 `internal` 저장소의 `tools/export_public.py`가 만든다. 손으로 고치면 다음 실행에서
+덮어쓴다. 내용을 바꾸려면 `internal/placenames/registry.csv`를 고치고 스크립트를 다시 돌린다.
+
+```
+_placenames/DHC-*.md        향토문화 ID 한 건이 한 장 → /id/<ID>/
+assets/data/placenames.csv  공개 등재부의 기계 판독용 사본
+catalogue/*.md              해마다 동결하는 발간본 「대전향토문화목록」
+```
+
+`_placenames`는 Jekyll 컬렉션이다(`_config.yml`의 `collections`). 주소는 각 문서의
+`permalink`으로 정한다 — 컬렉션 permalink의 `:name`은 슬러그화 때 소문자로 바뀌어
+`DHC-`가 `dhc-`가 되기 때문이다. **`/id/<ID>/` 주소 형식은 바꾸지 않는다.**
+위키데이터 외부 식별자 속성 제안의 formatter URL로 쓸 영구 주소이고,
+이미 공개·인용된 ID의 링크가 끊긴다.
+
+사람이 고치는 쪽은 `placenames.md`(등재부 안내 페이지)와 두 레이아웃
+(`_layouts/placename.html`, `_layouts/catalogue.html`)이다.
+
 ## 주의
 
 - `_config.yml`의 `url`은 `https://daehyang.github.io`, `baseurl`은 빈 문자열이다.
