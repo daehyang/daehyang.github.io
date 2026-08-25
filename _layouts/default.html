@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <link rel="icon" href="{{ '/assets/img/seal.svg' | relative_url }}" type="image/svg+xml">
+  {% feed_meta %}
+</head>
+<body>
+
+  <!-- 판심(板心): 옛 책의 책등에서 가져온 세로 표제 -->
+  <div class="spine" aria-hidden="true">大田鄕土文化硏究會</div>
+
+  <header class="site-header">
+    <a class="brand" href="{{ '/' | relative_url }}">
+      <img class="seal" src="{{ '/assets/img/seal.svg' | relative_url }}" alt="" width="44" height="44">
+      <span class="brand-text">
+        <span class="brand-title">{{ site.title }}</span>
+        <span class="brand-sub">{{ site.title_hanja }}</span>
+      </span>
+    </a>
+    <nav class="site-nav" aria-label="주요 메뉴">
+      <a href="{{ '/about/' | relative_url }}">소개</a>
+      <a href="{{ '/journal/' | relative_url }}">회지</a>
+      <a href="{{ '/projects/' | relative_url }}">사업</a>
+      <a href="{{ '/notice/' | relative_url }}">소식</a>
+    </nav>
+  </header>
+
+  <main class="content">
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <p>{{ site.title }} {{ site.title_hanja }} · 2019년 6월 17일 창립</p>
+    <p>
+      <a href="https://www.wikidata.org/wiki/{{ site.org.wikidata }}">위키데이터 {{ site.org.wikidata }}</a> ·
+      ISNI {{ site.org.isni }} ·
+      <a href="https://github.com/daehyang">GitHub</a>
+    </p>
+    <p class="license">이 사이트의 글은 별도 표시가 없는 한 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.ko">CC BY-SA 4.0</a>으로 이용할 수 있습니다.</p>
+  </footer>
+
+</body>
+</html>

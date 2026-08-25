@@ -1,0 +1,138 @@
+/* ---------------------------------------------------------------
+   대전향토문화연구회 — 사이트 스타일
+   팔레트: 백지 · 먹 · 회묵 · 인주(印朱) · 쪽(藍)
+   원칙: 외양보다 실질. 장식은 판심(세로 표제)과 인장 둘로 그친다.
+   --------------------------------------------------------------- */
+:root {
+  --paper:   #FBFAF7;
+  --ink:     #1C1A17;
+  --ink-2:   #6B675F;
+  --seal:    #A22C21;   /* 인주 붉은색 */
+  --indigo:  #2C4A63;   /* 쪽빛 — 링크 */
+  --line:    #E5E2DA;
+  --serif: "Noto Serif KR", "Nanum Myeongjo", serif;
+  --sans:  "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  --mono: "SF Mono", "Consolas", "Nanum Gothic Coding", monospace;
+}
+
+* { box-sizing: border-box; }
+
+html { font-size: 17px; }  /* 고령 독자 기준: 기본보다 한 단계 크게 */
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  line-height: 1.85;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+/* ---- 판심: 화면 왼쪽 고정 세로 표제 (좁은 화면에서는 숨김) ---- */
+.spine {
+  position: fixed;
+  top: 0; left: 0;
+  height: 100vh;
+  width: 3.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  writing-mode: vertical-rl;
+  font-family: var(--serif);
+  font-size: 0.95rem;
+  letter-spacing: 0.9em;
+  color: var(--ink-2);
+  border-right: 1px solid var(--line);
+  user-select: none;
+}
+@media (max-width: 900px) { .spine { display: none; } }
+
+/* ---- 공통 폭 ---- */
+.site-header, .content, .site-footer {
+  max-width: 44rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+/* ---- 머리 ---- */
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 1.5rem;
+  padding-top: 2.2rem;
+  padding-bottom: 1.4rem;
+  border-bottom: 1px solid var(--line);
+}
+.brand { display: flex; align-items: center; gap: 0.8rem; text-decoration: none; color: inherit; }
+.seal { display: block; }
+.brand-title { display: block; font-family: var(--serif); font-weight: 600; font-size: 1.25rem; line-height: 1.3; }
+.brand-sub { display: block; font-size: 0.8rem; color: var(--ink-2); letter-spacing: 0.14em; }
+.site-nav { margin-left: auto; display: flex; gap: 1.3rem; }
+.site-nav a { color: var(--ink); text-decoration: none; font-weight: 500; padding-bottom: 0.15rem; border-bottom: 2px solid transparent; }
+.site-nav a:hover, .site-nav a:focus-visible { border-bottom-color: var(--seal); }
+
+/* ---- 본문 ---- */
+.content { padding-top: 2.6rem; padding-bottom: 3.5rem; min-height: 55vh; }
+
+h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.45; }
+h1.page-title { font-size: 1.75rem; margin: 0 0 1.6rem; }
+h2 { font-size: 1.3rem; margin: 2.4rem 0 0.8rem; }
+h3 { font-size: 1.1rem; margin: 1.8rem 0 0.5rem; }
+
+a { color: var(--indigo); text-underline-offset: 0.2em; }
+a:hover { color: var(--seal); }
+
+blockquote {
+  margin: 1.6rem 0;
+  padding: 0.2rem 0 0.2rem 1.1rem;
+  border-left: 3px solid var(--seal);
+  color: var(--ink-2);
+  font-family: var(--serif);
+}
+
+hr { border: 0; border-top: 1px solid var(--line); margin: 2.4rem 0; }
+
+code, .qid { font-family: var(--mono); font-size: 0.88em; background: #F1EFE8; padding: 0.08em 0.35em; border-radius: 3px; }
+
+table { border-collapse: collapse; width: 100%; margin: 1.4rem 0; font-size: 0.95rem; }
+th, td { border: 1px solid var(--line); padding: 0.5rem 0.7rem; text-align: left; vertical-align: top; }
+th { background: #F3F1EA; font-weight: 500; }
+
+/* ---- 첫 화면 서문 ---- */
+.preface {
+  font-family: var(--serif);
+  font-size: 1.32rem;
+  line-height: 2.05;
+  margin: 1.2rem 0 2.6rem;
+}
+.preface .first { color: var(--seal); }
+
+/* ---- 목록(소식·회지) ---- */
+.entry-list { list-style: none; padding: 0; margin: 0; }
+.entry-list li { display: flex; gap: 1.2rem; padding: 0.85rem 0; border-bottom: 1px solid var(--line); }
+.entry-list time { flex: 0 0 7.2rem; color: var(--ink-2); font-size: 0.92rem; font-variant-numeric: tabular-nums; }
+.entry-list a { text-decoration: none; }
+.entry-list a:hover { text-decoration: underline; }
+
+.post-date { color: var(--ink-2); font-size: 0.92rem; margin-bottom: 0.3rem; }
+
+/* ---- 발 ---- */
+.site-footer {
+  border-top: 1px solid var(--line);
+  padding-top: 1.6rem;
+  padding-bottom: 3rem;
+  color: var(--ink-2);
+  font-size: 0.88rem;
+  line-height: 1.9;
+}
+.site-footer p { margin: 0.2rem 0; }
+.site-footer a { color: inherit; }
+.license { margin-top: 0.8rem; }
+
+/* ---- 접근성 ---- */
+:focus-visible { outline: 2px solid var(--seal); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }

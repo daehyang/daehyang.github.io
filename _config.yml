@@ -1,0 +1,34 @@
+title: 대전향토문화연구회
+title_hanja: 大田鄕土文化硏究會
+description: 대전의 향토문화를 조사·연구하고, 그 성과를 위키미디어와 연결해 오래 남기는 연구 모임입니다.
+url: "https://daehyang.github.io"
+baseurl: ""
+lang: ko
+timezone: Asia/Seoul
+
+# 기관 정보 (푸터·메타에 사용)
+org:
+  founded: 2019-06-17
+  journal: 대전향토연구
+  wikidata: Q141162117
+  isni: "0000 0005 3077 2340"
+  email: ""   # 대표 메일 확정 후 기입
+
+markdown: kramdown
+permalink: /notice/:year/:month/:day/:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: ""
+    values:
+      layout: page
+
+# GitHub Pages 기본 플러그인
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
