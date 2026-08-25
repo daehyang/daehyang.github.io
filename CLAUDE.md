@@ -58,3 +58,19 @@ catalogue/*.md              해마다 동결하는 발간본 「대전향토문�
   자동 발급이 아니다 — `journal` 저장소의 `CLAUDE.md` 참조.
 - `Gemfile`은 로컬 미리보기용이다. GitHub Pages는 자체 `github-pages` 버전으로 빌드하므로
   플러그인을 추가할 때는 GitHub Pages 허용 목록에 있는지 먼저 확인한다.
+
+## 로컬 빌드
+
+`bundle install && bundle exec jekyll serve`가 정식 경로다. `github-pages` gem 전체를
+받지 않고 빠르게 확인만 하려면 jekyll을 직접 써도 된다(2026-08-25에 Jekyll 4.4.1로 확인):
+
+```
+gem install jekyll jekyll-feed jekyll-sitemap tzinfo tzinfo-data
+jekyll build --destination <임시경로> --disable-disk-cache
+```
+
+- Windows에서 `tzinfo`·`tzinfo-data`가 없으면 `_config.yml`의 `timezone: Asia/Seoul`
+  때문에 빌드가 실패한다.
+- 경로가 아주 긴 폴더에서 빌드하면 `.jekyll-cache` 쓰기가 실패한다 —
+  그때는 `--disable-disk-cache`를 붙인다.
+- 빌드 산출물(`_site/`, `.jekyll-cache/`)은 `.gitignore`에 있다. 커밋하지 않는다.

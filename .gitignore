@@ -1,0 +1,12 @@
+# Jekyll 로컬 빌드 산출물
+_site/
+.jekyll-cache/
+.jekyll-metadata
+
+# bundler
+.bundle/
+vendor/
+
+# 편집기·운영체제
+.DS_Store
+Thumbs.db
