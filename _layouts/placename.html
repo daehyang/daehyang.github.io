@@ -9,9 +9,11 @@ layout: default
 
   {% if page.status == "폐기" %}
   <blockquote class="pn-retired">
-    <strong>이 항목은 폐기되었습니다.</strong>
+    <strong>이 항목은 등재가 폐기되었습니다.</strong>
+    {% if page.retired_reason %}사유: {{ page.retired_reason }}{% endif %}
     향토문화 ID는 영구 식별자이므로 폐기한 뒤에도 이 주소를 그대로 유지하며,
-    번호를 다시 쓰지 않습니다. 폐기 사유는 「대전향토문화목록」 해당 판을 보십시오.
+    번호를 다시 쓰지 않습니다. 이 항목을 인용한 글이 있다면 폐기 사실을 함께
+    밝혀 주십시오.
   </blockquote>
   {% endif %}
 
