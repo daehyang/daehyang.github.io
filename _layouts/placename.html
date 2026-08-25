@@ -3,17 +3,16 @@ layout: default
 ---
 <article class="placename">
 
-  <p class="pn-kicker">향토문화 ID</p>
+  <p class="pn-kicker">대전의 지명과 문화유산 목록</p>
   <h1 class="page-title">{{ page.title }}</h1>
-  <p class="pn-id"><code>{{ page.hid }}</code></p>
+  <p class="pn-id">향토문화 ID <code>{{ page.hid }}</code></p>
 
   {% if page.status == "폐기" %}
   <blockquote class="pn-retired">
-    <strong>이 항목은 등재가 폐기되었습니다.</strong>
+    <strong>이 항목은 목록에서 내렸습니다.</strong>
     {% if page.retired_reason %}사유: {{ page.retired_reason }}{% endif %}
-    향토문화 ID는 영구 식별자이므로 폐기한 뒤에도 이 주소를 그대로 유지하며,
-    번호를 다시 쓰지 않습니다. 이 항목을 인용한 글이 있다면 폐기 사실을 함께
-    밝혀 주십시오.
+    번호는 한 번 붙이면 다시 쓰지 않으므로, 내린 뒤에도 이 주소는 그대로 남겨 둡니다.
+    이 항목을 인용한 글이 있다면 내려진 사실을 함께 밝혀 주십시오.
   </blockquote>
   {% endif %}
 
@@ -58,7 +57,7 @@ layout: default
     {% endif %}
   </dl>
 
-  <h2>인용</h2>
+  <h2>이 항목을 인용하실 때</h2>
   <p class="pn-cite">
     대전향토문화연구회, 「대전향토문화목록」, 향토문화 ID {{ page.hid }},
     {{ page.url | absolute_url }}
@@ -66,6 +65,6 @@ layout: default
 
   {{ content }}
 
-  <p class="pn-back"><a href="{{ '/placenames/' | relative_url }}">공개 등재부 전체 보기</a></p>
+  <p class="pn-back"><a href="{{ '/placenames/' | relative_url }}">목록 전체 보기</a></p>
 
 </article>

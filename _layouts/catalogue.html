@@ -10,6 +10,10 @@ layout: default
     <dd>{{ page.edition }}</dd>
     <dt>발간일</dt>
     <dd>{{ page.issued }}</dd>
+    {% if page.span %}
+    <dt>수록 기간</dt>
+    <dd>{{ page.span }}년 확정분</dd>
+    {% endif %}
     <dt>수록 항목</dt>
     <dd>{{ page.count }}건</dd>
     <dt>DOI</dt>
@@ -29,9 +33,10 @@ layout: default
   <h2>이용 조건</h2>
   <p>
     이 목록은 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.ko">CC BY-SA 4.0</a>으로
-    공개합니다. 개별 항목을 인용할 때는 향토문화 ID와 그 항목의 주소를 함께 밝혀 주십시오.
+    공개합니다. 낱낱의 항목을 인용하실 때는 향토문화 ID와 그 항목의 주소를 함께
+    밝혀 주십시오.
   </p>
 
-  <p class="pn-back"><a href="{{ '/placenames/' | relative_url }}">공개 등재부로 돌아가기</a></p>
+  <p class="pn-back"><a href="{{ '/placenames/' | relative_url }}">최신 목록 보기</a></p>
 
 </article>

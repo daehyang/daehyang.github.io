@@ -35,7 +35,7 @@ _posts/           소식 글: YYYY-MM-DD-제목.md
 
 ```
 _placenames/DHC-*.md        향토문화 ID 한 건이 한 장 → /id/<ID>/
-assets/data/placenames.csv  공개 등재부의 기계 판독용 사본
+assets/data/placenames.csv  공개 목록의 기계 판독용 사본
 catalogue/*.md              해마다 동결하는 발간본 「대전향토문화목록」
 ```
 
@@ -45,7 +45,7 @@ catalogue/*.md              해마다 동결하는 발간본 「대전향토문�
 위키데이터 외부 식별자 속성 제안의 formatter URL로 쓸 영구 주소이고,
 이미 공개·인용된 ID의 링크가 끊긴다.
 
-사람이 고치는 쪽은 `placenames.md`(등재부 안내 페이지)와 두 레이아웃
+사람이 고치는 쪽은 `placenames.md`(목록 안내 페이지)와 두 레이아웃
 (`_layouts/placename.html`, `_layouts/catalogue.html`)이다.
 
 ## 주의
