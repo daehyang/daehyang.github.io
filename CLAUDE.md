@@ -3,8 +3,9 @@
 대전향토문화연구회 공식 홈페이지. Jekyll + GitHub Pages(legacy build).
 `main`에 푸시하면 몇 분 내 https://daehyang.github.io 에 반영된다.
 
-전체 진행 상황과 남은 일은 **`internal` 저장소의 `docs/SETUP-GUIDE.md`**가 기준이다
-(비공개 저장소이므로 접근 권한 필요).
+남은 일은 `internal` 저장소의 **Issues**에 있다. 연구회 GitHub 운영 문서도 그 저장소의
+`docs/` 에 있다 — `operations.md`(임원용 절차, 홈페이지 관리 방법 포함) ·
+`maintenance.md`(기술) · `decisions.md`(결정 기록). 비공개 저장소이므로 접근 권한이 필요하다.
 
 ## 구조
 
