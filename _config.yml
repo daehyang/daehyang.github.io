@@ -27,7 +27,11 @@ org:
   # 'Korea Authority File' 로 같은 주소를 담고 있다(국립중앙도서관이 ISNI 에
   # 제출한 값이다). https://isni.org/isni/0000000530772340 에서 확인한다.
   nlk_url: "https://librarian.nl.go.kr/LI/contents/L20101000000.do?id="
-  email: ""   # 대표 메일 확정 후 기입
+  # 공식 연락처. 푸터와 소개 페이지가 이 값을 참조한다 — 바뀌면 여기만 고친다.
+  address: 대전광역시 대덕구 아리랑로 211 상가동 202호
+  phone: 042-252-3305
+  band: https://band.us/@dj2019
+  email: ""   # 대표 메일이 생기면 기입 (지금은 전화와 밴드로 받는다)
 
 markdown: kramdown
 permalink: /notice/:year/:month/:day/:title/

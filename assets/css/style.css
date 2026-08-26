@@ -130,6 +130,9 @@ th { background: #F3F1EA; font-weight: 500; }
   line-height: 1.9;
 }
 .site-footer p { margin: 0.2rem 0; }
+/* 연락처는 사람이 쓰는 정보라 조금 띄우고, 등록 식별자는 한 단계 죽인다 */
+.footer-contact { margin-top: 0.9rem !important; }
+.footer-ids { margin-top: 0.9rem !important; font-size: 0.95em; opacity: 0.85; }
 .site-footer a { color: inherit; }
 .license { margin-top: 0.8rem; }
 
