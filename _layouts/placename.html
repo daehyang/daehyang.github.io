@@ -45,7 +45,7 @@ layout: default
 
     {% if page.wikipedia %}
     <dt>위키백과</dt>
-    <dd><a href="{{ page.wikipedia }}">한국어 위키백과 문서</a></dd>
+    <dd><a href="{{ page.wikipedia }}">{{ page.wikipedia_title | default: "한국어 위키백과 문서" }}</a></dd>
     {% endif %}
 
     <dt>상태</dt>
