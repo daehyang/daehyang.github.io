@@ -49,7 +49,7 @@
     <p class="footer-contact">
       {{ site.org.address }}<br>
       전화 <a href="tel:{{ site.org.phone | remove: '-' }}">{{ site.org.phone }}</a>
-      {% if band_url != "" %}· <a href="{{ band_url }}">네이버 밴드</a>{% endif %}
+      {% if band_url != "" %}· <a href="{{ band_url }}">네이버 밴드(회원용)</a>{% endif %}
       · <a href="{{ '/feed.xml' | relative_url }}">소식 구독</a>
     </p>
     <p class="footer-ids">
