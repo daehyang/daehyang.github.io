@@ -19,10 +19,11 @@ permalink: /about/
 | 항목 | 값 |
 |---|---|
 | 창립일 | 2019년 6월 17일 |
+| 위키백과 | [대전향토문화연구회](https://ko.wikipedia.org/wiki/대전향토문화연구회) |
 | 위키데이터 | [Q141162117](https://www.wikidata.org/wiki/Q141162117) |
 | ISNI | [0000 0005 3077 2340](https://isni.org/isni/0000000530772340) |
 | 국립중앙도서관 전거 | [KAB202604522](https://librarian.nl.go.kr/LI/contents/L20101000000.do?id=KAB202604522) — 연구회 이름으로 등록된 발간 자료를 함께 볼 수 있습니다 |
-| 회지 | 「대전향토연구」 ([Q140909556](https://www.wikidata.org/wiki/Q140909556)) |
+| 회지 | 「대전향토연구」 · ISSN [3058-2369](https://portal.issn.org/resource/ISSN/3058-2369) · [Q140909556](https://www.wikidata.org/wiki/Q140909556) |
 
 ## 연락
 

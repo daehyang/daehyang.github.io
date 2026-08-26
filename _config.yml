@@ -10,7 +10,15 @@ timezone: Asia/Seoul
 org:
   founded: 2019-06-17
   journal: 대전향토연구
+  # 회지 ISSN. 2024-06-11 부여. ISSN 포털에서 'Confirmed record'(인쇄본)로 확인된다.
+  # https://portal.issn.org/resource/ISSN/3058-2369
+  journal_issn: "3058-2369"
   wikidata: Q141162117
+  # 한국어 위키백과 문서 제목. 주소는 ko.wikipedia.org/wiki/ 뒤에 이어 붙인다.
+  # 위키데이터 Q141162117 의 사이트링크와 같은 문서다 — 문서가 옮겨지면 여기를 고친다.
+  # 연구회가 자기 문서를 직접 고치는 것은 이해충돌로 본다. 사실이 틀리면
+  # 문서를 편집하지 말고 토론 문서에 근거를 대고 요청한다.
+  wikipedia: 대전향토문화연구회
   isni: "0000 0005 3077 2340"
   # 국립중앙도서관 전거번호. 이 번호 자체는 영구 식별자다.
   nlk: KAB202604522

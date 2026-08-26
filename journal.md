@@ -6,6 +6,8 @@ permalink: /journal/
 「대전향토연구」는 대전향토문화연구회가 펴내는 연간 학술지입니다.
 2022년에 창간하였으며, 모든 호는 이곳에서 PDF로 공개합니다.
 
+ISSN [{{ site.org.journal_issn }}](https://portal.issn.org/resource/ISSN/{{ site.org.journal_issn }}) (인쇄본)
+
 ## 발간 목록
 
 | 호 | 발간 | 내려받기 | DOI |
