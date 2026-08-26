@@ -11,7 +11,7 @@ permalink: /journal/
 | 호 | 발간 | 내려받기 | DOI |
 |---|---|---|---|
 | 창간호 (2022) | 2022 | (준비 중) | — |
-| 제2호 (2023) | 2023 | (준비 중) | — |
+| 제2호 (2024) | 2024 | (준비 중) | — |
 
 각 호의 PDF는 [journal 저장소의 Release](https://github.com/daehyang/journal/releases)에서
 받을 수 있습니다. 모든 호는 [Zenodo](https://zenodo.org)에 함께 보존하여 호마다 DOI를 부여하므로,
