@@ -12,6 +12,9 @@ org:
   journal: 대전향토연구
   wikidata: Q141162117
   isni: "0000 0005 3077 2340"
+  # 국립중앙도서관 전거번호. 주소 형식은 위키데이터 P5034 가 정한
+  # https://lod.nl.go.kr/resource/$1 을 쓴다.
+  nlk: KAB202604522
   email: ""   # 대표 메일 확정 후 기입
 
 markdown: kramdown
