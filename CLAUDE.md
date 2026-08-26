@@ -7,6 +7,15 @@
 `docs/` 에 있다 — `operations.md`(임원용 절차, 홈페이지 관리 방법 포함) ·
 `maintenance.md`(기술) · `decisions.md`(결정 기록). 비공개 저장소이므로 접근 권한이 필요하다.
 
+## 브랜치와 푸시
+
+- **`main` 에 직접 푸시**한다. 브랜치와 PR 을 만들지 않는다
+  (`internal/docs/decisions.md` 0012). 세 저장소 중 `journal` 만 브랜치·PR 을 쓴다.
+- `main` 이 곧 배포다. 그래서 **사이트에 나가는 파일을 고쳤으면 푸시 전에 로컬 빌드로
+  확인한다** (아래 "로컬 빌드"). Liquid 오류는 빌드에서만 잡힌다.
+  `CLAUDE.md`·`README.md`·`Gemfile` 은 `_config.yml` 의 `exclude` 에 있어 빌드에
+  영향이 없으므로 이 확인이 필요없다.
+
 ## 구조
 
 ```
