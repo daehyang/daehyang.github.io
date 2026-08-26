@@ -40,11 +40,17 @@
 
   <footer class="site-footer">
     <p>{{ site.title }} {{ site.title_hanja }} · 2019년 6월 17일 창립</p>
+    {%- comment -%}
+      Liquid 에서 빈 문자열("")은 '참'이다. site.org.band 를 그대로 조건에 쓰면
+      값이 비어도 통과해 href="" 인 빈 링크가 남는다. 먼저 담아 두고 비교한다.
+      (주석 안에 Liquid 태그 문법을 적으면 태그로 해석되므로 적지 않는다.)
+    {%- endcomment -%}
+    {% assign band_url = site.org.band | default: "" | strip %}
     <p class="footer-contact">
       {{ site.org.address }}<br>
-      전화 <a href="tel:{{ site.org.phone | remove: '-' }}">{{ site.org.phone }}</a> ·
-      <a href="{{ site.org.band }}">네이버 밴드</a> ·
-      <a href="{{ '/feed.xml' | relative_url }}">소식 구독</a>
+      전화 <a href="tel:{{ site.org.phone | remove: '-' }}">{{ site.org.phone }}</a>
+      {% if band_url != "" %}· <a href="{{ band_url }}">네이버 밴드</a>{% endif %}
+      · <a href="{{ '/feed.xml' | relative_url }}">소식 구독</a>
     </p>
     <p class="footer-ids">
       <a href="https://www.wikidata.org/wiki/{{ site.org.wikidata }}">위키데이터</a> ·
