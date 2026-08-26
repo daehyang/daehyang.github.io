@@ -23,9 +23,10 @@ description: 대전향토문화연구회가 문헌과 현지 조사로 확인하
 
 {% else %}
 
-<table>
+<div class="table-scroll">
+<table class="pn-list">
   <thead>
-    <tr><th>번호</th><th>이름</th><th>유형</th><th>소재지</th><th>발의</th></tr>
+    <tr><th>번호</th><th>이름</th><th>유형</th><th class="wrap">소재지</th><th>발의</th></tr>
   </thead>
   <tbody>
   {% for item in listed %}
@@ -33,12 +34,13 @@ description: 대전향토문화연구회가 문헌과 현지 조사로 확인하
       <td><a href="{{ item.url | relative_url }}"><code>{{ item.hid }}</code></a></td>
       <td>{{ item.label }}{% if item.hanja %} ({{ item.hanja }}){% endif %}</td>
       <td>{{ item.kind }}</td>
-      <td>{{ item.locality }}</td>
+      <td class="wrap">{{ item.locality }}</td>
       <td>{{ item.credit }}</td>
     </tr>
   {% endfor %}
   </tbody>
 </table>
+</div>
 
 {% endif %}
 
@@ -49,20 +51,22 @@ description: 대전향토문화연구회가 문헌과 현지 조사로 확인하
 
 ### 목록에서 해제된 항목
 
-<table>
+<div class="table-scroll">
+<table class="pn-list">
   <thead>
-    <tr><th>번호</th><th>이름</th><th>내린 사유</th></tr>
+    <tr><th>번호</th><th>이름</th><th class="wrap">내린 사유</th></tr>
   </thead>
   <tbody>
   {% for item in retired %}
     <tr>
       <td><a href="{{ item.url | relative_url }}"><code>{{ item.hid }}</code></a></td>
       <td>{{ item.label }}{% if item.hanja %} ({{ item.hanja }}){% endif %}</td>
-      <td>{{ item.retired_reason }}</td>
+      <td class="wrap">{{ item.retired_reason }}</td>
     </tr>
   {% endfor %}
   </tbody>
 </table>
+</div>
 번호는 한 번 붙이면 **변경되지 않고, 다시 쓰지 않습니다.** 
 나중에 목록에서 내린 항목도 주소를 그대로 남기고 내렸다는 사실을 그 자리에 표시합니다. 
 
