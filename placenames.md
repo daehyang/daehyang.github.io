@@ -29,7 +29,7 @@ description: 대전향토문화연구회가 문헌과 현지 조사로 확인하
 
 <table>
   <thead>
-    <tr><th>번호</th><th>이름</th><th>유형</th><th>소재지</th></tr>
+    <tr><th>번호</th><th>이름</th><th>유형</th><th>소재지</th><th>발의</th></tr>
   </thead>
   <tbody>
   {% for item in listed %}
@@ -38,6 +38,7 @@ description: 대전향토문화연구회가 문헌과 현지 조사로 확인하
       <td>{{ item.label }}{% if item.hanja %} ({{ item.hanja }}){% endif %}</td>
       <td>{{ item.kind }}</td>
       <td>{{ item.locality }}</td>
+      <td>{{ item.credit }}</td>
     </tr>
   {% endfor %}
   </tbody>

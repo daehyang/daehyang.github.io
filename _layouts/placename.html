@@ -55,6 +55,11 @@ layout: default
     <dt>등재일</dt>
     <dd>{{ page.registered }}</dd>
     {% endif %}
+
+    {% if page.credit %}
+    <dt>발의</dt>
+    <dd>{{ page.credit }} 님이 찾아 알려주셨습니다.</dd>
+    {% endif %}
   </dl>
 
   <h2>이 항목을 인용하실 때</h2>
