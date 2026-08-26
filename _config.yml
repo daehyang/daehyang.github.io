@@ -22,6 +22,10 @@ org:
   # 도서관 화면 개편에 따라 바뀔 수 있다. 그때는 이 한 줄만 고치면
   # 사이트 전체가 따라온다. 기계 판독용 영구 주소가 필요하면
   # 위키데이터 P5034 가 정한 https://lod.nl.go.kr/resource/<번호> 를 쓴다.
+  #
+  # 이 주소가 죽었을 때 새 주소를 찾는 곳: ISNI 기록의 Notes 항목이
+  # 'Korea Authority File' 로 같은 주소를 담고 있다(국립중앙도서관이 ISNI 에
+  # 제출한 값이다). https://isni.org/isni/0000000530772340 에서 확인한다.
   nlk_url: "https://librarian.nl.go.kr/LI/contents/L20101000000.do?id="
   email: ""   # 대표 메일 확정 후 기입
 
