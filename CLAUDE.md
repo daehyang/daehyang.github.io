@@ -25,6 +25,7 @@ assets/           style.css, seal.svg(파비콘·브랜드 인장)
 index.md          첫 화면 (레이아웃 default 직접 지정)
 about.md journal.md projects.md notice.md    고정 페이지 (permalink 각자 지정)
 _posts/           소식 글: YYYY-MM-DD-제목.md
+research/         발간 전 조사 자료 — 사이트에 나가지 않는다(`exclude`). research/README.md 참조
 ```
 
 ## 규칙
@@ -93,3 +94,7 @@ jekyll build --destination <임시경로> --disable-disk-cache
 - 경로가 아주 긴 폴더에서 빌드하면 `.jekyll-cache` 쓰기가 실패한다 —
   그때는 `--disable-disk-cache`를 붙인다.
 - 빌드 산출물(`_site/`, `.jekyll-cache/`)은 `.gitignore`에 있다. 커밋하지 않는다.
+- **`Gemfile`이 있는 폴더에서 위 명령을 그대로 쓰면 실패한다.** jekyll이 bundler를 먼저
+  읽어 `github-pages` gem을 찾다가 멈춘다(`Bundler::GemNotFound`). gem만 설치해 빠르게
+  확인할 때는 `Gemfile`·`Gemfile.lock`을 뺀 사본을 임시 폴더에 만들어 거기서 빌드한다
+  (2026-09-01 확인). `JEKYLL_NO_BUNDLER=1`은 듣지 않았다.
