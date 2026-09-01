@@ -87,3 +87,6 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - vendor
+  # 발간 전 조사 자료. 저장소에서는 보이되 홈페이지에는 싣지 않는다.
+  # 확정 전 메모가 사이트 주소로 열리면 확정 자료로 오해받는다.
+  - research
