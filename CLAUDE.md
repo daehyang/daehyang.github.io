@@ -26,6 +26,7 @@ index.md          첫 화면 (레이아웃 default 직접 지정)
 about.md journal.md projects.md notice.md    고정 페이지 (permalink 각자 지정)
 _posts/           소식 글: YYYY-MM-DD-제목.md
 research/         발간 전 조사 자료 — 사이트에 나가지 않는다(`exclude`). research/README.md 참조
+.github/workflows/labels.yml   이슈 라벨을 코드로 만든다 (Actions 탭에서 수동 실행)
 ```
 
 ## 규칙
