@@ -16,6 +16,16 @@ rows = list(csv.DictReader(io.open(CSV, encoding='utf-8')))
 pts = [r for r in rows if r['위도']]
 
 
+def ko_count(n):
+    """점 수를 우리말 수사로 — 열일곱 번째 좌표가 서면 제목이 따라와야 한다."""
+    ones = '한 두 세 네 다섯 여섯 일곱 여덟 아홉'.split()
+    tens = '열 스물 서른 마흔 쉰 예순 일흔 여든 아흔'.split()
+    if not 1 <= n <= 99:
+        return '%d' % n
+    t, o = divmod(n, 10)
+    return (tens[t - 1] if t else '') + (ones[o - 1] if o else '')
+
+
 def label_of(r):
     """지도에 찍을 짧은 이름 — 우리말 이름이 있으면 그것, 없으면 한자."""
     t = r['표제']
@@ -50,7 +60,7 @@ io.open(GJ, 'w', encoding='utf-8').write(json.dumps(
                     "설명": "대전향토문화연구회 고개 조사. 좌표는 미군 AMS 1:50,000"
                             "(저본 1919) 그리드를 환산한 것으로 ±1 km 로 읽으십시오. "
                             "자세한 것은 research/대전-고개-대조표.md 의 3.1 과 14.5-3.",
-                    "만든날": "2026-10-01"},
+                    "출처": "research/고개-위치.csv"},
      "features": feats}, ensure_ascii=False, indent=1) + '\n')
 
 
@@ -116,7 +126,7 @@ o = ['<!-- 이 그림은 research/고개-위치.csv 에서 make-positions.py 가
 
 # 제목
 o += ['<text x="%d" y="38" font-size="20" font-weight="700" fill="%s">'
-      '대전 지역 고개 — 좌표가 선 열여섯</text>' % (PAD_L, INK),
+      '대전 지역 고개 — 좌표가 선 %s 점</text>' % (PAD_L, INK, ko_count(len(pts))),
       '<text x="%d" y="59" font-size="12.5" fill="%s">미군 AMS 1:50,000(저본 1919) '
       '그리드를 환산한 값 · <tspan font-weight="600">±1 km 로 읽으십시오</tspan></text>' % (PAD_L, INK2),
       '<text x="%d" y="77" font-size="12" fill="%s">지도 위쪽 바깥(북위 36°20′ 너머)이 '
