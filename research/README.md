@@ -70,6 +70,8 @@
 제보가 확인할 값이 있으면 Discussion 에서 **Create issue from discussion** 으로 이슈로
 올립니다. 출처가 자동으로 이어집니다.
 
+**토론방 주소**: https://github.com/daehyang/daehyang.github.io/discussions
+
 **카테고리는 넷을 둡니다.**
 
 | 카테고리 | 형식 | 무엇 |
