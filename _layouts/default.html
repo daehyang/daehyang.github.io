@@ -30,7 +30,7 @@
       <a href="{{ '/journal/' | relative_url }}">회지</a>
       <a href="{{ '/projects/' | relative_url }}">사업</a>
       <a href="{{ '/placenames/' | relative_url }}">지명목록</a>
-      <a href="{{ site.org.discussions }}" target="_blank" rel="noopener"
+      <a href="{{ site.org.discussions }}" target="_blank" rel="noopener" data-popup
          aria-label="지명제보 (새 창에서 열림)">지명제보</a>
       <a href="{{ '/notice/' | relative_url }}">소식</a>
     </nav>
@@ -63,6 +63,27 @@
     </p>
     <p class="license">이 사이트의 글은 별도 표시가 없는 한 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.ko">CC BY-SA 4.0</a>으로 이용할 수 있습니다.</p>
   </footer>
+
+  <!-- 바깥으로 나가는 링크(data-popup)를 작은 창으로 띄운다.
+       target="_blank" 만 두면 크롬이 탭으로 열어 보던 자리를 밀어낸다.
+       자바스크립트가 꺼져 있거나 창이 막히면 window.open 이 null 을 돌려주고,
+       그때는 기본 동작(target="_blank")이 그대로 받는다 — 어느 쪽이든 열린다.
+       휴대전화 브라우저에는 창이라는 것이 없어 탭으로 열린다. 막을 수 없다. -->
+  <script>
+    document.querySelectorAll('a[data-popup]').forEach(function (a) {
+      a.addEventListener('click', function (e) {
+        var w = 1040, h = 820;
+        var x = Math.max(0, Math.round((screen.width  - w) / 2));
+        var y = Math.max(0, Math.round((screen.height - h) / 2));
+        var win = window.open(
+          a.href, 'daehyang-jebo',
+          'width=' + w + ',height=' + h + ',left=' + x + ',top=' + y +
+          ',location=yes,resizable=yes,scrollbars=yes'
+        );
+        if (win) { e.preventDefault(); win.focus(); }
+      });
+    });
+  </script>
 
 </body>
 </html>
