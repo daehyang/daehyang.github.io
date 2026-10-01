@@ -1,19 +1,22 @@
 # 새 이슈 화면에 안내 링크를 띄운다.
 #
+# 이 저장소의 Issues 는 **연구진이 손을 움직이는 일**만 둔다 — 도엽 채록, 문서 반영,
+# 사이트 문제. 지명에 관한 의논(제보·판독 의견·비정)은 지명제보 게시판에서 한다.
+# 기준은 research/README.md 의 "지명제보 게시판과 Issues — 가르는 기준".
+#
 # blank_issues_enabled 를 true 로 둔 것은 의도한 것이다. 이 저장소에는 이슈 서식이
-# 없으므로 false 로 두면 새 이슈를 아예 열 수 없게 된다 — 제보를 받으려는 것과
-# 정반대가 된다.
+# 없으므로 false 로 두면 새 이슈를 아예 열 수 없게 된다.
 blank_issues_enabled: true
 contact_links:
   - name: 고개 이름을 알려주기 (제보)
     url: https://github.com/daehyang/daehyang.github.io/discussions
-    about: 들으신 고개 이름·위치·내력을 토론방에 남겨 주십시오. 고지도를 읽지 못하셔도 됩니다.
+    about: 들으신 고개 이름·위치·내력은 지명제보 게시판 「제보」에 남겨 주십시오. 고지도를 읽지 못하셔도 됩니다.
   - name: 글자를 달리 읽으셨다면 (판독 의견)
     url: https://github.com/daehyang/daehyang.github.io/discussions
-    about: 확대한 사진과 함께 토론방에 올려 주십시오. 결론이 나면 이슈로 올립니다.
+    about: 게시판 「판독 의견」에 확대한 사진과 함께 올려 주십시오. 어느 고개인지 가리는 의논도 여기입니다.
+  - name: 자료나 절차가 궁금하시면 (묻고 답하기)
+    url: https://github.com/daehyang/daehyang.github.io/discussions
+    about: 게시판 「묻고 답하기」에 물어 주십시오. 답이 정해지면 채택합니다.
   - name: 계정 없이 알려주기
     url: https://daehyang.github.io/placenames/
-    about: GitHub 계정이 없으시면 홈페이지의 연락처로 알려 주십시오.
-  - name: 지금까지 확정된 목록 보기
-    url: https://daehyang.github.io/placenames/
-    about: 심의를 거쳐 확정 등재된 대전의 지명·문화유산입니다.
+    about: GitHub 계정이 없으시면 홈페이지에 안내된 대표 전화로 알려 주십시오.

@@ -28,8 +28,9 @@ jobs:
         run: |
           set -euo pipefail
           put() { gh label create "$1" --color "$2" --description "$3" --force; }
+          # 제보환영 라벨은 2026-10-01 에 없앴다 — 제보는 지명제보 게시판에서 받는다.
+          # gh label create 는 지우지 못하므로, 이미 만들어진 라벨은 웹 화면에서 지운다.
           put "고개조사" "0E5A8A" "대전 고개 지명 조사 (research/)"
-          put "제보환영" "0E8A16" "고지도를 못 읽어도 답할 수 있는 이슈. 회원 제보 환영"
           put "홈페이지" "6E5494" "사이트 자체 문제 — 페이지·레이아웃·배포"
           echo "--- 지금 라벨 ---"
           gh label list
