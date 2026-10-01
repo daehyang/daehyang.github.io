@@ -46,6 +46,11 @@ org:
   # band.us/@dj2019 형태는 열리지 않았다 — '밴드 주소'를 설정한 공개 밴드만 쓴다.
   band: https://www.band.us/band/75349980
   email: ""   # 대표 메일이 생기면 기입 (지금은 전화와 밴드로 받는다)
+  # 지명 제보를 받는 GitHub 토론방. 메뉴와 /placenames/ 안내가 이 값을 쓴다.
+  # 지금은 토론방 첫 화면을 가리킨다. 카테고리('제보') 직접 주소가 정해지면
+  # 여기만 고치면 두 곳이 함께 따라온다.
+  # 공개 저장소의 토론방이라 계정 없이 읽히고, 글을 쓰려면 계정이 필요하다.
+  discussions: https://github.com/daehyang/daehyang.github.io/discussions
 
 markdown: kramdown
 permalink: /notice/:year/:month/:day/:title/

@@ -112,7 +112,7 @@ description: 대전향토문화연구회가 문헌과 현지 조사로 확인하
 
 - **전화 [{{ site.org.phone }}](tel:{{ site.org.phone | remove: "-" }})** — 계정이
   없어도 되는 길입니다. 지명과 그 위치, 그렇게 들으신 경위를 말씀해 주십시오.
-- **[GitHub 토론방](https://github.com/daehyang/daehyang.github.io/discussions)** — 계정이
+- **[GitHub 토론방]({{ site.org.discussions }})** — 계정이
   있으시면 글로 남기실 수 있습니다. 근거가 되는 문헌을 적어 두기 좋고, 확대한 사진도
   붙이실 수 있습니다. 고지도를 읽지 못하셔도 됩니다 — 들으신 이야기만으로 충분합니다.
   적으신 글은 **누구나 볼 수 있으니 전화번호·주소 같은 연락처는 적지 마십시오.**

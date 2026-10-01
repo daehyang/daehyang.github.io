@@ -71,7 +71,7 @@ body {
 .seal { display: block; }
 .brand-title { display: block; font-family: var(--serif); font-weight: 600; font-size: 1.25rem; line-height: 1.3; }
 .brand-sub { display: block; font-size: 0.8rem; color: var(--ink-2); letter-spacing: 0.14em; }
-.site-nav { margin-left: auto; display: flex; gap: 1.3rem; }
+.site-nav { margin-left: auto; display: flex; flex-wrap: wrap; gap: 0.5rem 1.3rem; }
 .site-nav a { color: var(--ink); text-decoration: none; font-weight: 500; padding-bottom: 0.15rem; border-bottom: 2px solid transparent; }
 .site-nav a:hover, .site-nav a:focus-visible { border-bottom-color: var(--seal); }
 
