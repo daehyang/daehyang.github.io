@@ -1,3 +1,4 @@
+<!-- 이 그림은 research/고개-위치.csv 에서 make-positions.py 가 만듭니다. 손으로 고치지 마십시오 — 다음 실행에서 덮어씁니다. 내용을 바꾸려면 고개-위치.csv 를 고치십시오. -->
 <svg xmlns="http://www.w3.org/2000/svg" width="980" height="790" viewBox="0 0 980 790" font-family="Pretendard, -apple-system, &quot;Apple SD Gothic Neo&quot;, &quot;Noto Sans KR&quot;, &quot;Malgun Gothic&quot;, sans-serif">
 <rect width="980" height="790" fill="#fcfcfb"/>
 <text x="74" y="38" font-size="20" font-weight="700" fill="#0b0b0b">대전 지역 고개 — 좌표가 선 열여섯</text>

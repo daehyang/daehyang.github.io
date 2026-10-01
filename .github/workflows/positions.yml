@@ -1,0 +1,75 @@
+# 고개 위치 대장의 사본을 다시 만든다.
+#
+# 정본은 research/고개-위치.csv 하나이고, 아래 셋은 거기서 나온 생성물이다.
+#     research/고개-위치.geojson          현대 지도용 (GitHub 이 지도로 그린다)
+#     research/고개-위치.svg              이름이 함께 찍힌 지도
+#     research/대전-고개-대조표.md 3.1    「대장」 표
+#
+# 손으로 맞추면 반드시 어긋난다. 그래서 여기서 돌린다 — 웹 화면에서 .csv 만
+# 고치면 지도가 저절로 따라온다.
+#
+# 되돌이(무한 반복) 걱정은 없다. 이 작업이 커밋하는 것은 생성물 셋뿐이고,
+# 그 셋은 아래 paths 에 들어 있지 않아 다시 불러오지 않는다.
+#
+# 손으로 돌리려면: Actions 탭 → "고개 위치 사본 만들기" → Run workflow
+# 내 컴퓨터에서 돌리려면: cd research && python3 make-positions.py
+
+name: 고개 위치 사본 만들기
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research/고개-위치.csv'
+      - 'research/make-positions.py'
+      - '.github/workflows/positions.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: positions
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 사본 셋 만들기
+        working-directory: research
+        run: python3 make-positions.py
+
+      - name: 만든 것 검사
+        working-directory: research
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import csv, io, json, xml.dom.minidom as dom
+          rows = list(csv.DictReader(io.open('고개-위치.csv', encoding='utf-8')))
+          need = sum(1 for r in rows if r['위도'])
+          gj = json.load(io.open('고개-위치.geojson', encoding='utf-8'))
+          got = len(gj['features'])
+          assert got == need, '점 수가 안 맞습니다: geojson %d, csv %d' % (got, need)
+          for f in gj['features']:
+              lon, lat = f['geometry']['coordinates']
+              assert 126 < lon < 129 and 35 < lat < 38, '좌표가 한반도 중부를 벗어납니다: %r' % (f,)
+              assert f['properties'].get('name'), '이름이 빈 점이 있습니다: %r' % (f,)
+          dom.parse('고개-위치.svg')          # SVG 가 깨지지 않았는가
+          print('대장 %d 건 · 점 %d 개 · 이상 없음' % (len(rows), got))
+          PY
+
+      - name: 바뀌었으면 커밋
+        run: |
+          set -euo pipefail
+          git add 'research/고개-위치.geojson' 'research/고개-위치.svg' 'research/대전-고개-대조표.md'
+          if git diff --cached --quiet; then
+            echo "사본이 이미 정본과 맞습니다 — 커밋할 것이 없습니다."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "고개 위치: 사본을 정본(고개-위치.csv)에 맞춰 다시 만듦"
+          git push

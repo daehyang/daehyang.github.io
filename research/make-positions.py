@@ -44,6 +44,9 @@ for r in pts:
 io.open(GJ, 'w', encoding='utf-8').write(json.dumps(
     {"type": "FeatureCollection",
      "properties": {"이름": "대전 지역 고개 — 좌표가 선 것",
+                    "만든것": "이 파일은 research/고개-위치.csv 에서 make-positions.py 가 "
+                              "만듭니다. 손으로 고치지 마십시오 — 다음 실행에서 덮어씁니다. "
+                              "내용을 바꾸려면 고개-위치.csv 를 고치십시오.",
                     "설명": "대전향토문화연구회 고개 조사. 좌표는 미군 AMS 1:50,000"
                             "(저본 1919) 그리드를 환산한 것으로 ±1 km 로 읽으십시오. "
                             "자세한 것은 research/대전-고개-대조표.md 의 3.1 과 14.5-3.",
@@ -103,7 +106,10 @@ for r in sorted(pts, key=lambda r: (-float(r['위도']), float(r['경도']))):
         placed.append((x + 8, y - FS, x + 8 + w, y + 4))
         labels.append((x + 10, y + 4, 'start', s, not r['표제'].startswith('(미상)')))
 
-o = ['<svg xmlns="http://www.w3.org/2000/svg" width="%d" height="%d" viewBox="0 0 %d %d" '
+o = ['<!-- 이 그림은 research/고개-위치.csv 에서 make-positions.py 가 만듭니다.'
+     ' 손으로 고치지 마십시오 — 다음 실행에서 덮어씁니다.'
+     ' 내용을 바꾸려면 고개-위치.csv 를 고치십시오. -->',
+     '<svg xmlns="http://www.w3.org/2000/svg" width="%d" height="%d" viewBox="0 0 %d %d" '
      'font-family="Pretendard, -apple-system, &quot;Apple SD Gothic Neo&quot;, '
      '&quot;Noto Sans KR&quot;, &quot;Malgun Gothic&quot;, sans-serif">' % (W, H, W, H),
      '<rect width="%d" height="%d" fill="%s"/>' % (W, H, SURF)]
