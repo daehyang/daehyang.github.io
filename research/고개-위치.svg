@@ -1,7 +1,7 @@
 <!-- 이 그림은 research/고개-위치.csv 에서 make-positions.py 가 만듭니다. 손으로 고치지 마십시오 — 다음 실행에서 덮어씁니다. 내용을 바꾸려면 고개-위치.csv 를 고치십시오. -->
 <svg xmlns="http://www.w3.org/2000/svg" width="980" height="790" viewBox="0 0 980 790" font-family="Pretendard, -apple-system, &quot;Apple SD Gothic Neo&quot;, &quot;Noto Sans KR&quot;, &quot;Malgun Gothic&quot;, sans-serif">
 <rect width="980" height="790" fill="#fcfcfb"/>
-<text x="74" y="38" font-size="20" font-weight="700" fill="#0b0b0b">대전 지역 고개 — 좌표가 선 열여섯</text>
+<text x="74" y="38" font-size="20" font-weight="700" fill="#0b0b0b">대전 지역 고개 — 좌표가 선 열여섯 점</text>
 <text x="74" y="59" font-size="12.5" fill="#52514e">미군 AMS 1:50,000(저본 1919) 그리드를 환산한 값 · <tspan font-weight="600">±1 km 로 읽으십시오</tspan></text>
 <text x="74" y="77" font-size="12" fill="#9a9992">지도 위쪽 바깥(북위 36°20′ 너머)이 대전 시가입니다 — 고개는 모두 그 남쪽에 있습니다</text>
 <line x1="95.7" y1="96" x2="95.7" y2="704" stroke="#e6e5df" stroke-width="1" stroke-dasharray="2 5"/>
