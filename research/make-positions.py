@@ -337,18 +337,22 @@ if bg:
                 bgtext += text(lx, ly, 11, BGINK, q['이름'], anc)
                 break
 
+    # 시(市)는 조금 크게 — 그림에 닻이 하나는 있어야 어디를 보고 있는지 안다.
     for q in bg.get('마을', []):
         if q['갈래'] not in ('city', 'town'):
             continue
         if not (LAT0 < q['위도'] < LAT1 and LON0 < q['경도'] < LON1):
             continue
+        big = q['갈래'] == 'city'
+        fs = 13.5 if big else 11
         x, y = X(q['경도']), Y(q['위도'])
-        w = tw(q['이름'], 11)
-        box = (x - w / 2 - 2, y - 9, x + w / 2 + 2, y + 5)
+        w = tw(q['이름'], fs)
+        box = (x - w / 2 - 2, y - fs + 2, x + w / 2 + 2, y + 5)
         if hit(box):
             continue
         placed.append(box)
-        bgtext += text(x, y + 3.5, 11, BGINK, q['이름'], 'middle')
+        bgtext += text(x, y + 3.5, fs, '#7c7970' if big else BGINK, q['이름'], 'middle',
+                       '600' if big else None)
 o += bgtext
 
 # **바탕이 덜 받아졌으면 그림에 적는다.** 받다 만 지도를 다 받은 것처럼

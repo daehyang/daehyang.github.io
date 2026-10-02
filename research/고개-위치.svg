@@ -1254,8 +1254,8 @@
 <text x="622.9" y="661.3" font-size="11.0" text-anchor="middle" fill="#8e8b81">군서면</text>
 <text x="139.6" y="700.4" font-size="11.0" text-anchor="middle" fill="none" stroke="#fcfcfb" stroke-width="3.2" stroke-linejoin="round">두마면</text>
 <text x="139.6" y="700.4" font-size="11.0" text-anchor="middle" fill="#8e8b81">두마면</text>
-<text x="114.9" y="652.2" font-size="11.0" text-anchor="middle" fill="none" stroke="#fcfcfb" stroke-width="3.2" stroke-linejoin="round">계룡시</text>
-<text x="114.9" y="652.2" font-size="11.0" text-anchor="middle" fill="#8e8b81">계룡시</text>
+<text x="114.9" y="652.2" font-size="13.5" text-anchor="middle" fill="none" stroke="#fcfcfb" stroke-width="3.2" stroke-linejoin="round" font-weight="600">계룡시</text>
+<text x="114.9" y="652.2" font-size="13.5" text-anchor="middle" fill="#7c7970" font-weight="600">계룡시</text>
 <text x="640.1" y="873.0" font-size="11.0" text-anchor="middle" fill="none" stroke="#fcfcfb" stroke-width="3.2" stroke-linejoin="round">군북면</text>
 <text x="640.1" y="873.0" font-size="11.0" text-anchor="middle" fill="#8e8b81">군북면</text>
 <text x="340.6" y="949.9" font-size="11.0" text-anchor="middle" fill="none" stroke="#fcfcfb" stroke-width="3.2" stroke-linejoin="round">진산면</text>
