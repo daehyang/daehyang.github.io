@@ -3,10 +3,30 @@
  "properties": {
   "이름": "대전 지역 고개 — 좌표가 선 것",
   "만든것": "이 파일은 research/고개-위치.csv 에서 make-positions.py 가 만듭니다. 손으로 고치지 마십시오 — 다음 실행에서 덮어씁니다. 내용을 바꾸려면 고개-위치.csv 를 고치십시오.",
-  "설명": "대전향토문화연구회 고개 조사. 좌표는 미군 AMS 1:50,000(저본 1919) 그리드를 환산한 것으로 ±1 km 로 읽으십시오. 자세한 것은 research/대전-고개-대조표.md 의 3.1 과 14.5-3.",
+  "설명": "대전향토문화연구회 고개 조사. 급 B 는 미군 AMS 1:50,000(저본 1919) 그리드를 환산한 것으로 ±1 km, 급 C 는 그 고개가 있는 동(洞)의 중심이라 고개 자체의 자리가 아닙니다(1~3 km 틀릴 수 있습니다). 자세한 것은 research/대전-고개-대조표.md 의 3.1 과 14.5-3.",
   "출처": "research/고개-위치.csv"
  },
  "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     127.2721,
+     36.362
+    ]
+   },
+   "properties": {
+    "name": "삽재 揷峙",
+    "표제": "삽재",
+    "한자": "揷峙",
+    "급": "A",
+    "도엽자리": "",
+    "비고": "유성구 갑동 ↔ 공주시 반포면 온천리 · 국토정보플랫폼 · OSM 고갯마루 점 · 갑동 서쪽, 공주 가는 길",
+    "marker-color": "#2a78d6",
+    "marker-size": "medium"
+   }
+  },
   {
    "type": "Feature",
    "geometry": {
@@ -85,6 +105,26 @@
     "비고": "동구 삼괴동 ↔ 옥천 군서·군북면, 표고 315",
     "marker-color": "#2a78d6",
     "marker-size": "medium"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     127.4637,
+     36.3678
+    ]
+   },
+   "properties": {
+    "name": "질티 / 길치 吉峙 / 迭峴 / 陶峙",
+    "표제": "질티 / 길치",
+    "한자": "吉峙 / 迭峴 / 陶峙",
+    "급": "C",
+    "도엽자리": "1872 회덕 (0.694, 0.253); 대동여지도 15-04 (0.75, 0.98)",
+    "비고": "대덕구 비래동 ↔ 동구 추동 / 동구 비룡동 ↔ 가양동 — 두 기록이 갈림",
+    "marker-color": "#7d93ab",
+    "marker-size": "small"
    }
   },
   {
@@ -205,6 +245,346 @@
     "비고": "감암산 북쪽 — 15장의 「대별동 ↔ 소호동」과 2 km 어긋납니다",
     "marker-color": "#2a78d6",
     "marker-size": "medium"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     127.3463,
+     36.3665
+    ]
+   },
+   "properties": {
+    "name": "장고개 獐峴",
+    "표제": "장고개 · 노루고개",
+    "한자": "獐峴",
+    "급": "C",
+    "도엽자리": "",
+    "비고": "유성구 궁동",
+    "marker-color": "#7d93ab",
+    "marker-size": "small"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     127.3189,
+     36.3692
+    ]
+   },
+   "properties": {
+    "name": "도미재 道美峙",
+    "표제": "도미재 · 덕미",
+    "한자": "道美峙",
+    "급": "C",
+    "도엽자리": "",
+    "비고": "유성구 노은동",
+    "marker-color": "#7d93ab",
+    "marker-size": "small"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     127.3651,
+     36.4093
+    ]
+   },
+   "properties": {
+    "name": "솔고개 松峴〔유성〕",
+    "표제": "솔고개",
+    "한자": "松峴〔유성〕",
+    "급": "C",
+    "도엽자리": "",
+    "비고": "유성구 방현동",
+    "marker-color": "#7d93ab",
+    "marker-size": "small"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     127.366,
+     36.4585
+    ]
+   },
+   "properties": {
+    "name": "중고개 中峴",
+    "표제": "중고개",
+    "한자": "中峴",
+    "급": "C",
+    "도엽자리": "",
+    "비고": "유성구 둔곡동",
+    "marker-color": "#7d93ab",
+    "marker-size": "small"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     127.4528,
+     36.3782
+    ]
+   },
+   "properties": {
+    "name": "절고개 龍子庵峴",
+    "표제": "절고개",
+    "한자": "龍子庵峴",
+    "급": "A",
+    "도엽자리": "",
+    "비고": "대덕구 비래동 ↔ 동구 추동 가래울 · OSM 고갯마루 점 · 비래동과 추동 사이",
+    "marker-color": "#2a78d6",
+    "marker-size": "medium"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     127.4428,
+     36.3648
+    ]
+   },
+   "properties": {
+    "name": "다롱고개 月峴",
+    "표제": "다롱고개",
+    "한자": "月峴",
+    "급": "C",
+    "도엽자리": "",
+    "비고": "대덕구 송촌동",
+    "marker-color": "#7d93ab",
+    "marker-size": "small"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     127.4163,
+     36.3937
+    ]
+   },
+   "properties": {
+    "name": "갬재 榛峴",
+    "표제": "갬재",
+    "한자": "榛峴",
+    "급": "C",
+    "도엽자리": "",
+    "비고": "대덕구 신대동",
+    "marker-color": "#7d93ab",
+    "marker-size": "small"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     127.4694,
+     36.4265
+    ]
+   },
+   "properties": {
+    "name": "찬샘골고개 冷泉峴",
+    "표제": "찬샘골고개",
+    "한자": "冷泉峴",
+    "급": "C",
+    "도엽자리": "",
+    "비고": "대덕구 갈전동",
+    "marker-color": "#7d93ab",
+    "marker-size": "small"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     127.4569,
+     36.4144
+    ]
+   },
+   "properties": {
+    "name": "배오개 梨峴",
+    "표제": "배오개",
+    "한자": "梨峴",
+    "급": "A",
+    "도엽자리": "",
+    "비고": "대덕구 이현동 · OSM 고갯마루 점 「배고개」 · 이현동 서쪽",
+    "marker-color": "#2a78d6",
+    "marker-size": "medium"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     127.4616,
+     36.4301
+    ]
+   },
+   "properties": {
+    "name": "덕고개 德洞峴 / 德谷峴",
+    "표제": "덕고개",
+    "한자": "德洞峴 / 德谷峴",
+    "급": "A",
+    "도엽자리": "",
+    "비고": "대덕구 삼정동 ↔ 용호동 · OSM 고갯마루 점 · 삼정동·용호동 남쪽",
+    "marker-color": "#2a78d6",
+    "marker-size": "medium"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     127.4715,
+     36.4595
+    ]
+   },
+   "properties": {
+    "name": "구리고개 銅峴〔?〕",
+    "표제": "구리고개",
+    "한자": "銅峴〔?〕",
+    "급": "C",
+    "도엽자리": "",
+    "비고": "대덕구 미호동",
+    "marker-color": "#7d93ab",
+    "marker-size": "small"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     127.2727,
+     36.3048
+    ]
+   },
+   "properties": {
+    "name": "진티고개 鎭峙",
+    "표제": "진티고개",
+    "한자": "鎭峙",
+    "급": "C",
+    "도엽자리": "",
+    "비고": "유성구 세동",
+    "marker-color": "#7d93ab",
+    "marker-size": "small"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     127.3191,
+     36.2794
+    ]
+   },
+   "properties": {
+    "name": "대고개 大峴",
+    "표제": "대고개",
+    "한자": "大峴",
+    "급": "A",
+    "도엽자리": "",
+    "비고": "서구 봉곡동 · OSM 고갯마루 점 · 봉곡동 북쪽 1.2 km",
+    "marker-color": "#2a78d6",
+    "marker-size": "medium"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     127.5191,
+     36.3394
+    ]
+   },
+   "properties": {
+    "name": "자모실고개 炭峴 / 沈峴",
+    "표제": "자모실고개",
+    "한자": "炭峴 / 沈峴",
+    "급": "C",
+    "도엽자리": "",
+    "비고": "동구 삼정동 ↔ 옥천 군북면 자모리",
+    "marker-color": "#7d93ab",
+    "marker-size": "small"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     127.4133,
+     36.2242
+    ]
+   },
+   "properties": {
+    "name": "느나미재 於南峙",
+    "표제": "느나미재",
+    "한자": "於南峙",
+    "급": "C",
+    "도엽자리": "",
+    "비고": "중구 어남동",
+    "marker-color": "#7d93ab",
+    "marker-size": "small"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     127.3693,
+     36.2818
+    ]
+   },
+   "properties": {
+    "name": "안영고개 安永峴",
+    "표제": "안영고개",
+    "한자": "安永峴",
+    "급": "A",
+    "도엽자리": "",
+    "비고": "중구 안영동 · OSM 고갯마루 점 — 다만 OSM 은 서구로 적습니다(중구 경계 위)",
+    "marker-color": "#2a78d6",
+    "marker-size": "medium"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     127.3463,
+     36.3665
+    ]
+   },
+   "properties": {
+    "name": "남작골고개 南鵲峴",
+    "표제": "남작골고개",
+    "한자": "南鵲峴",
+    "급": "C",
+    "도엽자리": "",
+    "비고": "유성구 궁동",
+    "marker-color": "#7d93ab",
+    "marker-size": "small"
    }
   },
   {
