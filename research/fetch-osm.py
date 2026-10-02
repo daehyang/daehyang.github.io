@@ -66,6 +66,20 @@ NODES = {
 }
 
 
+# 계류(stream)는 수가 많아 한 띠가 무겁다 — 다른 켜보다 **더 잘게** 자른다.
+# 2026-10-02 에 세 띠로 받으려다 스무 번을 내리 끊겼다.
+FINE = {'stream': 2}
+
+
+def bands_for(name):
+    k = FINE.get(name, 1)
+    out = []
+    for lo, hi in BANDS:
+        for j in range(k):
+            out.append((lo + (hi - lo) * j / k, lo + (hi - lo) * (j + 1) / k))
+    return out
+
+
 def jobs():
     # **중요한 켜부터 받는다.** 공개 서버가 막으면 오래 걸리므로, 중간에
     # 멈추더라도 손에 남는 것이 쓸모 있게 순서를 둔다 — 산·지명과 큰길이
@@ -73,7 +87,7 @@ def jobs():
     for name, sel in NODES.items():
         yield name, name, '(%s(%s););out;' % (sel, BB)
     for name, sel in WAYS.items():
-        for k, (lo, hi) in enumerate(BANDS):
+        for k, (lo, hi) in enumerate(bands_for(name)):
             bb = '%f,%f,%f,%f' % (lo, W, hi, E)
             # 합집합 괄호 안은 **마지막에도 `;`** 가 있어야 한다. 빠뜨리면 서버가
             # 400 parse error 를 돌려주는데, 그 몸통이 HTML 이라 오류 글이 눈에
@@ -117,7 +131,7 @@ def grab(name, q, tries=TRIES):
             body = urllib.parse.urlencode({'data': '[out:json][timeout:90];' + q}).encode()
             req = urllib.request.Request(
                 m, data=body, headers={'User-Agent': UA})
-            with urllib.request.urlopen(req, timeout=45) as r:
+            with urllib.request.urlopen(req, timeout=150) as r:
                 d = json.loads(r.read().decode('utf-8'))
             check(m, d)
             time.sleep(1.5)           # 공개 서버에 몰아치지 않는다
