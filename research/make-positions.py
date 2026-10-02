@@ -315,14 +315,14 @@ if bg:
     # 고개가 묻힌다. 바탕의 일은 길잡이지 목록이 아니다.
     seen, kept = {}, []
     for q in sorted(bg.get('봉우리', []), key=lambda q: -q['높이']):
-        if q['높이'] < 330 or len(kept) >= 20 or q['이름'].endswith('점'):
+        if q['높이'] < 330 or len(kept) >= 30 or q['이름'].endswith('점'):
             continue
         if not (LAT0 < q['위도'] < LAT1 and LON0 < q['경도'] < LON1):
             continue
         if q['이름'] in seen:
             continue
         x, y = X(q['경도']), Y(q['위도'])
-        if any(math.hypot(x - a, y - b) < 80 for a, b in kept):
+        if any(math.hypot(x - a, y - b) < 66 for a, b in kept):
             continue
         seen[q['이름']] = 1
         kept.append((x, y))
