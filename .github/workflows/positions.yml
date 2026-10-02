@@ -1,6 +1,10 @@
 # 고개 위치 대장의 사본을 다시 만든다.
 #
 # 정본은 research/고개-위치.csv 하나이고, 아래 셋은 거기서 나온 생성물이다.
+# (지도 바탕으로 깔리는 research/배경-osm.json 도 재료로 함께 읽는다. 그 파일은
+#  research/fetch-osm.py 로 **손으로** 받아 두는 것이고 이 작업은 받지 않는다 —
+#  그림 하나 그리자고 남의 서버를 두드릴 일이 아니고, 그 서버가 막히면 그림이
+#  아예 안 나오게 되기 때문이다.)
 #     research/고개-위치.geojson          현대 지도용 (GitHub 이 지도로 그린다)
 #     research/고개-위치.svg              이름이 함께 찍힌 지도
 #     research/대전-고개-대조표.md 3.1    「대장」 표
@@ -21,6 +25,7 @@ on:
     branches: [main]
     paths:
       - 'research/고개-위치.csv'
+      - 'research/배경-osm.json'
       - 'research/make-positions.py'
       - '.github/workflows/positions.yml'
   workflow_dispatch:
