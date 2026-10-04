@@ -1,8 +1,8 @@
 <!-- 이 그림은 research/고개-위치.csv 에서 make-positions.py 가 만듭니다. 손으로 고치지 마십시오 — 다음 실행에서 덮어씁니다. 내용을 바꾸려면 고개-위치.csv 를 고치십시오. -->
 <svg xmlns="http://www.w3.org/2000/svg" width="790" height="1215" viewBox="0 0 790 1215" font-family="Pretendard, -apple-system, &quot;Apple SD Gothic Neo&quot;, &quot;Noto Sans KR&quot;, &quot;Malgun Gothic&quot;, sans-serif">
 <rect width="790" height="1215" fill="#fcfcfb"/>
-<text x="74" y="38" font-size="20" font-weight="700" fill="#0b0b0b">대전 지역 고개 — 자리를 아는 서른여섯</text>
-<text x="74" y="59" font-size="12.5" fill="#52514e">마름모 여섯 — 고갯마루 그 점 · 동그라미 열여섯 — 옛 지도에서 환산 (<tspan font-weight="600">±1 km</tspan>) · 네모 열네 — 자리는 그 동(洞) 어디쯤</text>
+<text x="74" y="38" font-size="20" font-weight="700" fill="#0b0b0b">대전 지역 고개 — 자리를 아는 마흔</text>
+<text x="74" y="59" font-size="12.5" fill="#52514e">마름모 여섯 — 고갯마루 그 점 · 동그라미 열여섯 — 옛 지도에서 환산 (<tspan font-weight="600">±1 km</tspan>) · 네모 열여덟 — 자리는 그 동(洞) 어디쯤</text>
 <text x="74" y="77" font-size="12" fill="#9a9992">동그라미는 하나도 빠짐없이 네모(AMS 도엽) 안에 있습니다 — 네모 밖에는 환산할 저본이 없기 때문입니다</text>
 <text x="74" y="95" font-size="12" fill="#9a9992">이 밖에 자리를 전혀 모르는 고개가 열세 건 더 있어 여기 없습니다</text>
 <path d="M506.5 858.4L506.1 868.2L504.8 866.3L503.9 857.7L505.9 857.5L506.5 858.4Z" fill="#dde8f1" stroke="none"/>
@@ -4126,6 +4126,14 @@
 <circle cx="134.5" cy="883.6" r="5" fill="#fcfcfb" stroke="#7b7a73" stroke-width="2"/>
 <circle cx="290.3" cy="999.3" r="6.5" fill="none" stroke="#fcfcfb" stroke-width="3"/>
 <circle cx="290.3" cy="999.3" r="5" fill="#fcfcfb" stroke="#7b7a73" stroke-width="2"/>
+<rect x="499.6" y="435.9" width="9" height="9" fill="none" stroke="#fcfcfb" stroke-width="3.5"/>
+<rect x="499.6" y="435.9" width="9" height="9" fill="#fcfcfb" stroke="#7d93ab" stroke-width="2"/>
+<rect x="471.0" y="482.5" width="9" height="9" fill="none" stroke="#fcfcfb" stroke-width="3.5"/>
+<rect x="471.0" y="482.5" width="9" height="9" fill="#fcfcfb" stroke="#7d93ab" stroke-width="2"/>
+<rect x="522.5" y="496.1" width="9" height="9" fill="none" stroke="#fcfcfb" stroke-width="3.5"/>
+<rect x="522.5" y="496.1" width="9" height="9" fill="#fcfcfb" stroke="#7d93ab" stroke-width="2"/>
+<rect x="558.5" y="508.1" width="9" height="9" fill="none" stroke="#fcfcfb" stroke-width="3.5"/>
+<rect x="558.5" y="508.1" width="9" height="9" fill="#fcfcfb" stroke="#7d93ab" stroke-width="2"/>
 <text x="535.9" y="235.2" font-size="12.5" text-anchor="start" fill="none" stroke="#fcfcfb" stroke-width="3.2" stroke-linejoin="round">구리고개</text>
 <text x="535.9" y="235.2" font-size="12.5" text-anchor="start" fill="#52514e">구리고개</text>
 <text x="342.5" y="237.5" font-size="12.5" text-anchor="start" fill="none" stroke="#fcfcfb" stroke-width="3.2" stroke-linejoin="round">중고개</text>
@@ -4148,16 +4156,24 @@
 <text x="256.2" y="440.1" font-size="12.5" text-anchor="start" fill="#52514e">도미재</text>
 <text x="521.6" y="443.3" font-size="12.5" text-anchor="start" fill="none" stroke="#fcfcfb" stroke-width="3.2" stroke-linejoin="round">질티 / 길치</text>
 <text x="521.6" y="443.3" font-size="12.5" text-anchor="start" fill="#52514e">질티 / 길치</text>
+<text x="494.1" y="444.4" font-size="12.5" text-anchor="end" fill="none" stroke="#fcfcfb" stroke-width="3.2" stroke-linejoin="round">東峙</text>
+<text x="494.1" y="444.4" font-size="12.5" text-anchor="end" fill="#52514e">東峙</text>
 <text x="306.4" y="446.3" font-size="12.5" text-anchor="start" fill="none" stroke="#fcfcfb" stroke-width="3.2" stroke-linejoin="round">장고개</text>
 <text x="306.4" y="446.3" font-size="12.5" text-anchor="start" fill="#52514e">장고개</text>
 <text x="463.3" y="450.1" font-size="12.5" text-anchor="end" fill="none" stroke="#fcfcfb" stroke-width="3.2" stroke-linejoin="round">다롱고개</text>
 <text x="463.3" y="450.1" font-size="12.5" text-anchor="end" fill="#52514e">다롱고개</text>
 <text x="170.4" y="456.5" font-size="12.5" text-anchor="start" fill="none" stroke="#fcfcfb" stroke-width="3.2" stroke-linejoin="round" font-weight="600">삽재</text>
 <text x="170.4" y="456.5" font-size="12.5" text-anchor="start" fill="#0b0b0b" font-weight="600">삽재</text>
+<text x="485.5" y="491.0" font-size="12.5" text-anchor="start" fill="none" stroke="#fcfcfb" stroke-width="3.2" stroke-linejoin="round">質峙</text>
+<text x="485.5" y="491.0" font-size="12.5" text-anchor="start" fill="#52514e">質峙</text>
+<text x="537.0" y="504.6" font-size="12.5" text-anchor="start" fill="none" stroke="#fcfcfb" stroke-width="3.2" stroke-linejoin="round">迭峙</text>
+<text x="537.0" y="504.6" font-size="12.5" text-anchor="start" fill="#52514e">迭峙</text>
 <text x="623.2" y="507.8" font-size="12.5" text-anchor="start" fill="none" stroke="#fcfcfb" stroke-width="3.2" stroke-linejoin="round">자모실고개</text>
 <text x="623.2" y="507.8" font-size="12.5" text-anchor="start" fill="#52514e">자모실고개</text>
-<text x="581.4" y="503.4" font-size="12.5" text-anchor="end" fill="none" stroke="#fcfcfb" stroke-width="3.2" stroke-linejoin="round">마달령 〔세천〕</text>
-<text x="581.4" y="503.4" font-size="12.5" text-anchor="end" fill="#52514e">마달령 〔세천〕</text>
+<text x="601.4" y="529.4" font-size="12.5" text-anchor="start" fill="none" stroke="#fcfcfb" stroke-width="3.2" stroke-linejoin="round">마달령 〔세천〕</text>
+<text x="601.4" y="529.4" font-size="12.5" text-anchor="start" fill="#52514e">마달령 〔세천〕</text>
+<text x="573.0" y="503.6" font-size="12.5" text-anchor="start" fill="none" stroke="#fcfcfb" stroke-width="3.2" stroke-linejoin="round">遠峙</text>
+<text x="573.0" y="503.6" font-size="12.5" text-anchor="start" fill="#52514e">遠峙</text>
 <text x="171.5" y="586.3" font-size="12.5" text-anchor="start" fill="none" stroke="#fcfcfb" stroke-width="3.2" stroke-linejoin="round">진티고개</text>
 <text x="171.5" y="586.3" font-size="12.5" text-anchor="start" fill="#52514e">진티고개</text>
 <text x="348.6" y="638.5" font-size="12.5" text-anchor="start" fill="none" stroke="#fcfcfb" stroke-width="3.2" stroke-linejoin="round" font-weight="600">안영고개</text>
